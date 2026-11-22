@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إلى الاء ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --pink:#ff8dc7;
+  --purple:#a98aff;
+  --white:#fff5ff;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--white);
+  font-family:'Cairo',sans-serif;
+  background:
+    radial-gradient(ellipse at 20% 20%,#45205f 0%,transparent 40%),
+    radial-gradient(ellipse at 80% 80%,#29164c 0%,transparent 45%),
+    linear-gradient(135deg,#080414,#100923 55%,#080414);
+}
+
+#stars{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0;
+}
+
+.star{
+  position:absolute;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:.2;transform:scale(.7)}
+  50%{opacity:1;transform:scale(1.4)}
+}
+
+.moon{
+  position:fixed;
+  width:150px;
+  height:150px;
+  top:8%;
+  left:9%;
+  border-radius:50%;
+  background:linear-gradient(135deg,#fff7df,#d8b9ff);
+  box-shadow:0 0 35px #e8caff,0 0 100px #a66cff66;
+  opacity:.85;
+  z-index:0;
+}
+
+.moon::after{
+  content:"";
+  position:absolute;
+  width:135px;
+  height:135px;
+  top:-12px;
+  right:-23px;
+  border-radius:50%;
+  background:#100923;
+}
+
+.container{
+  position:relative;
+  z-index:2;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px 18px;
+}
+
+.page{
+  width:min(700px,100%);
+  text-align:center;
+  padding:45px 30px;
+  border:1px solid #ffffff26;
+  border-radius:30px;
+  background:linear-gradient(145deg,#ffffff12,#ffffff05);
+  box-shadow:0 0 60px #a45bff16,inset 0 0 30px #ffffff06;
+  backdrop-filter:blur(15px);
+  animation:appear 1s ease;
+}
+
+.hidden{display:none!important}
+
+@keyframes appear{
+  from{opacity:0;transform:translateY(25px) scale(.97)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+.small-title{
+  color:#d7b9ff;
+  font-size:14px;
+  letter-spacing:4px;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(40px,9vw,75px);
+  line-height:1.5;
+  background:linear-gradient(90deg,#fff,#ff9bd2,#c4a0ff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 35px #e78bff30;
+}
+
+h2{
+  font-size:clamp(27px,6vw,42px);
+  color:#ffc1e2;
+  margin-bottom:22px;
+}
+
+p{
+  color:#f0e5f8;
+  font-size:17px;
+  line-height:2.3;
+}
+
+.divider{
+  width:90px;
+  height:2px;
+  margin:25px auto;
+  background:linear-gradient(90deg,transparent,#ff9bd2,transparent);
+}
+
+.heart{
+  display:inline-block;
+  font-size:65px;
+  margin:15px 0;
+  filter:drop-shadow(0 0 20px #ff66b6);
+  animation:heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  15%{transform:scale(1.18)}
+  30%{transform:scale(1)}
+  45%{transform:scale(1.12)}
+}
+
+button{
+  border:1px solid #ffffff40;
+  border-radius:50px;
+  padding:14px 32px;
+  color:white;
+  font-family:inherit;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin:12px 7px;
+  background:linear-gradient(100deg,#b15bd9,#e66eae);
+  box-shadow:0 8px 30px #d45bc944;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-4px) scale(1.04);
+  box-shadow:0 12px 35px #ed77c977;
+}
+
+button:active{transform:scale(.96)}
+
+.music-button{
+  position:fixed;
+  z-index:5;
+  top:20px;
+  right:20px;
+  font-size:13px;
+  padding:10px 20px;
+  background:#ffffff16;
+  backdrop-filter:blur(10px);
+}
+
+.message{
+  text-align:right;
+  background:#ffffff09;
+  border:1px solid #ffffff18;
+  border-radius:22px;
+  padding:25px;
+  margin:20px 0;
+}
+
+.message p{
+  font-family:'Amiri',serif;
+  font-size:21px;
+  line-height:2.1;
+}
+
+.signature{
+  color:#ffacd7;
+  font-size:22px;
+  margin-top:25px;
+}
+
+.floating-heart{
+  position:fixed;
+  bottom:-50px;
+  z-index:1;
+  pointer-events:none;
+  animation:floatUp linear forwards;
+  opacity:.7;
+}
+
+@keyframes floatUp{
+  to{
+    transform:translateY(-115vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+.footer{
+  color:#bca9cf;
+  font-size:12px;
+  margin-top:28px;
+}
+
+.password-box{
+  width:100%;
+  max-width:380px;
+  margin:25px auto 10px;
+}
+
+.password-box input{
+  display:block;
+  width:100%;
+  padding:16px 20px;
+  margin:15px 0;
+  border-radius:16px;
+  border:1px solid #e9b4ff55;
+  outline:none;
+  background:#ffffff10;
+  color:white;
+  font-family:'Cairo',sans-serif;
+  font-size:19px;
+  text-align:center;
+  direction:ltr;
+  transition:.3s;
+}
+
+.password-box input::placeholder{
+  color:#d4b8e6;
+  font-size:14px;
+}
+
+.password-box input:focus{
+  border-color:#ff9bd2;
+  box-shadow:0 0 20px #e66eae44;
+}
+
+.error-message{
+  color:#ff9ebc;
+  font-size:14px;
+  min-height:28px;
+  margin-top:10px;
+}
+
+@media(max-width:550px){
+  .page{padding:35px 20px}
+  .moon{width:90px;height:90px}
+  .moon::after{width:80px;height:80px}
+  .music-button{top:10px;right:10px}
+  p{font-size:15px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="stars"></div>
+<div class="moon"></div>
+
+<!-- اسم الأغنية مطابق لاسم الملف عندك -->
+<audio id="loveSong" src="./alaa-song.mp3.mp3.mp4" loop preload="auto"></audio>
+
+<button class="music-button" id="musicButton">♫ تشغيل الأغنية</button>
+
+<main class="container">
+
+  <!-- شاشة كلمة السر -->
+  <section class="page" id="passwordPage">
+    <div class="small-title">A SECRET WORLD FOR YOU</div>
+    <div class="heart">🔐</div>
+    <h2>عالمنا الصغير</h2>
+    <div class="divider"></div>
+
+    <p>
+      قبل ما تدخلي عالمنا الصغير<br>
+      عندي ليكي سؤالين ❤️
+    </p>
+
+    <form id="passwordForm" class="password-box">
+      <input id="password1" type="password"
+        placeholder="كلمة السر الأولى" autocomplete="off" required>
+
+      <input id="password2" type="password"
+        placeholder="كلمة السر الثانية" autocomplete="off" required>
+
+      <button type="submit">افتحي حكايتنا ❤️</button>
+      <div class="error-message" id="errorMessage"></div>
+    </form>
+
+    <div class="footer">في حكاية مستنياكي يا الاء ✨</div>
+  </section>
+
+  <!-- الصفحة الأولى -->
+  <section class="page hidden" id="page1">
+    <div class="small-title">A LITTLE WORLD JUST FOR YOU</div>
+    <div class="heart">❤️</div>
+    <h1>إلى الاء</h1>
+    <div class="divider"></div>
+    <p>
+      وسط ملايين الحكايات<br>
+      كان نفسي أعملك حكاية مختلفة<br>
+      حكاية صغيرة بس فيها كل اللي جوايا
+    </p>
+    <br>
+    <button id="startButton">ابدأ حكايتنا ❤️</button>
+    <div class="footer">صُنعت بكل الحب ... من فتحي</div>
+  </section>
+
+  <!-- الصفحة الثانية -->
+  <section class="page hidden" id="page2">
+    <div class="small-title">JUST ONE MORE THING</div>
+    <div class="heart">💌</div>
+    <h2>في رسالة ليكي</h2>
+    <div class="divider"></div>
+    <p>
+      مش كل الكلام بيتقال بسهولة<br>
+      وفي كلام مكانه القلب مش اللسان<br>
+      وعشان كده عملتلك الحكاية دي
+    </p>
+    <br>
+    <button id="messageButton">اضغطي على الرسالة 💌</button>
+  </section>
+
+  <!-- الصفحة الثالثة -->
+  <section class="page hidden" id="page3">
+    <div class="small-title">MY HEART HAS SOMETHING TO SAY</div>
+    <h2>إلى أجمل حكاية ❤️</h2>
+    <div class="divider"></div>
+
+    <div class="message">
+      <p>
+        يمكن مش بعرف أعبّرلك كل يوم عن اللي جوايا،
+        بس الحقيقة إن وجودك في حياتي خلّى لكل حاجة معنى تاني.
+        <br><br>
+        ابتديت دلوقتي بس أحب عمري، ومن يوم ما بقيتي فيه
+        وأنا بتمنى تفضلي معايا في كل لحظة جاية.
+        <br><br>
+        عايزك تعرفي إنك غالية عندي، وإن كل لحظة حلوة معاكي
+        بتفضل محفورة في قلبي.
+        <br><br>
+        مهما عدى وقت، أتمنى نفضل نختار بعض كل يوم.
+      </p>
+    </div>
+
+    <div class="heart">❤️</div>
+    <div class="signature">بحبك يا الاء</div>
+    <div class="signature">من فتحي</div>
+    <div class="footer">وكل الحكاية لسه في بدايتها ✨</div>
+  </section>
+
+</main>
+
+<script>
+(() => {
+  const song = document.getElementById("loveSong");
+  const musicButton = document.getElementById("musicButton");
+
+  const passwordPage = document.getElementById("passwordPage");
+  const passwordForm = document.getElementById("passwordForm");
+  const password1 = document.getElementById("password1");
+  const password2 = document.getElementById("password2");
+  const errorMessage = document.getElementById("errorMessage");
+
+  const pages = [
+    document.getElementById("page1"),
+    document.getElementById("page2"),
+    document.getElementById("page3")
+  ];
+
+  const startButton = document.getElementById("startButton");
+  const messageButton = document.getElementById("messageButton");
+
+  function showPage(number) {
+    pages.forEach((page, index) => {
+      page.classList.toggle("hidden", index !== number);
+    });
+
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+
+  // التحقق من كلمتي السر بالترتيب
+  passwordForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const first = password1.value.trim();
+    const second = password2.value.trim();
+
+    if (first === "6/12" && second === "6/1") {
+      errorMessage.textContent = "";
+      passwordPage.classList.add("hidden");
+      showPage(0);
+    } else {
+      errorMessage.textContent = "الكلمتين مش صح، حاولي تاني يا الاء ❤️";
+      password1.value = "";
+      password2.value = "";
+      password1.focus();
+    }
+  });
+
+  // تشغيل الأغنية
+  async function startMusic() {
+    try {
+      await song.play();
+      musicButton.textContent = "♫ الأغنية شغالة";
+    } catch (error) {
+      musicButton.textContent = "اضغطي لتشغيل الأغنية ♫";
+    }
+  }
+
+  startButton.addEventListener("click", () => {
+    startMusic();
+    showPage(1);
+  });
+
+  messageButton.addEventListener("click", () => {
+    showPage(2);
+  });
+
+  musicButton.addEventListener("click", async () => {
+    if (song.paused) {
+      await startMusic();
+    } else {
+      song.pause();
+      musicButton.textContent = "♫ تشغيل الأغنية";
+    }
+  });
+
+  song.addEventListener("play", () => {
+    musicButton.textContent = "♫ الأغنية شغالة";
+  });
+
+  song.addEventListener("pause", () => {
+    musicButton.textContent = "♫ تشغيل الأغنية";
+  });
+
+  song.addEventListener("error", () => {
+    musicButton.textContent = "ملف الأغنية غير موجود";
+    console.error("تعذر تحميل ملف الأغنية");
+  });
+
+  // النجوم
+  const stars = document.getElementById("stars");
+
+  for(let i=0;i<130;i++){
+    const star = document.createElement("span");
+    star.className = "star";
+    const size = Math.random()*3+1;
+
+    star.style.width = size+"px";
+    star.style.height = size+"px";
+    star.style.left = Math.random()*100+"%";
+    star.style.top = Math.random()*100+"%";
+    star.style.animationDelay = Math.random()*4+"s";
+    star.style.animationDuration = (Math.random()*3+2)+"s";
+
+    stars.appendChild(star);
+  }
+
+  // القلوب المتحركة
+  function createHeart(){
+    const heart = document.createElement("span");
+    heart.className = "floating-heart";
+    heart.textContent = Math.random()>.5 ? "❤️" : "💗";
+    heart.style.left = Math.random()*100+"vw";
+    heart.style.fontSize = (Math.random()*18+13)+"px";
+    heart.style.animationDuration = (Math.random()*5+6)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),12000);
+  }
+
+  setInterval(createHeart,850);
+})();
+</script>
+
+</body>
+</html>
